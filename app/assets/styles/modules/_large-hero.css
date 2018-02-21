@@ -1,0 +1,26 @@
+ .large-hero {
+     position: relative;
+ }
+/* 
+ .large-hero h1 {
+     font-weight: 400;
+ } not allowed in BEM, unspecific and will cause nightmare in suistainable development*/
+
+ .large-hero__text-content{
+     /* position absolute looking for nearest relative's position parent and it is .large-hero */
+     position: absolute;
+     /* pull it down 50% */
+     top:50%;
+     left:0;
+     text-align: center;
+     /* make it center */
+     width: 100%;
+     /* push it up 50% of div height */
+     transform:translateY(-50%);
+ }
+
+ .large-hero__title {
+     font-weight: 300;
+     color: #292c61;
+     font-size: 4.8rem ;
+ }
