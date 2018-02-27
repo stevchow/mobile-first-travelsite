@@ -1,65 +1,61 @@
- .large-hero {
-     border-bottom: 12px solid $mainBlue;
-     position: relative;
+.large-hero {
+  border-bottom: 10px solid $mainBlue;
+  position: relative;
 
-     &__image{
-         display: block;
-     }
+  &__image {
+    display: block;
+  }
 
-     &__text-content{
-        /* position absolute looking for nearest relative's position parent and it is .large-hero */
-        position: absolute;
-        /* pull it down 50% */
-        top:50%;
-        left:0;
-        text-align: center;
-        /* make it center */
-        width: 100%;
-        /* push it up 50% of div height */
-        transform:translateY(-50%);
+  &__text-content {
+    padding-top: 88px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    @mixin atMedium {
+      padding-top: 60px;
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    color: $mainBlue;
+    margin: 0;
+    font-size: 2.4rem;
+  
+    @mixin atSmall {
+      font-size: 4.8rem;
     }
 
-    &__title {
-        font-weight: 300;
-        color: $mainBlue;
-        font-size: 2.4rem ;
-        margin: 0;
+  }
 
-        @mixin atSmall {
-            font-size: 2rem;
-        }
-    } 
-    
-    &__subtitle {
-        font-weight: 300;
-        color: $mainBlue;
-        font-size: 1.6rem ;
-        margin:0;
+  &__subtitle {
+    font-weight: 300;
+    color: $mainBlue;
+    font-size: 1.5rem;
+    margin: 0;
 
-        @mixin atSmall {
-            font-size: 2.9rem;
-        }
+    @mixin atSmall {
+      font-size: 2.9rem;
     }
 
-    &__description{
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: 100;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-        /* break the word after reach 30rem * 16px (default) = 480px*/
-        max-width: 30rem;
-        margin-left: auto;
-        margin-right: auto; 
-        @mixin atSmall {
-            font-size: 1.875rem;
-        }
+  }
+
+  &__description {
+    color: #FFF;
+    font-size: 1.1rem;
+    font-weight: 100;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @mixin atSmall {
+      font-size: 1.875rem;
     }
+  }
 
-
- }
-/* 
- .large-hero h1 {
-     font-weight: 400;
- } not allowed in BEM, unspecific and will cause nightmare in suistainable development*/
-
-
+}
